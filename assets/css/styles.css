@@ -1,0 +1,185 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, h2, h3, p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+}
+.charname{
+  font-size: 1rem;
+}
+.title{
+  font-size: 1.2rem;
+}
+
+*{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+}
+.charname{
+  font-size: 1rem;
+}
+header{
+  line-height: 3;
+}
+footer{
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+
+
+
+footer {
+  text-align: center;
+  /* margin-top: 50px;  */
+  
+}
+
+
+.card {
+  background: url(../images/background.gif);
+  background-color: rgb(255, 255, 255);
+  width: 226px;
+  padding: 20px;
+  height: 270px;
+  overflow-y: auto;
+  border: none;
+  color: #ffffff;
+  text-shadow:
+      -0.5px -0.5px 0 #000,
+      0.5px -0.5px 0 #000,
+      -0.5px 0.5px 0 #000,
+      0.5px 0.5px 0 #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      -1.5px -1.5px 0 #000,
+      1.5px -1.5px 0 #000,
+      -1.5px 1.5px 0 #000,
+      1.5px 1.5px 0 #000;
+}
+
+.parent-card {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.card::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.card {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.sub-card {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 5px 10px #000;
+  width: 256px;
+  padding: 20px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 12px;
+  transition: scale 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-card:hover {
+  scale: 1.1;
+}
+
+.char-face {
+  width: 70px;
+}
+
+
+.indi-char{
+  margin-top: 80px;
+}
+.char-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub-indi-card{
+  background: url(../images/background.gif);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 5px 10px #000;
+  width: 40%;
+  padding: 20px;
+  height: auto;
+  margin: 20px;
+  border-radius: 12px;
+  transition: scale 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.indi-card{
+  background: url(../images/ai_1.png);
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  padding: 20px;
+  height: auto;
+  overflow-y: auto;
+  border: none;
+  color: #ffffff;
+  text-shadow:
+      -0.5px -0.5px 0 #000,
+      0.5px -0.5px 0 #000,
+      -0.5px 0.5px 0 #000,
+      0.5px 0.5px 0 #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      -1.5px -1.5px 0 #000,
+      1.5px -1.5px 0 #000,
+      -1.5px 1.5px 0 #000,
+      1.5px 1.5px 0 #000;
+}
+.title-char{
+  text-align: center;
+  opacity: 0.9;
+  background-color: #737373;
+  padding: 10px;
+  color: #ffffff; 
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  2px 2px 0 #000;
+}
+
+
+
