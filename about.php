@@ -1,8 +1,8 @@
 <?php
-require_once 'classes/Character.php';
+require_once 'classes/Developer.php';
 
-$character = new Character();
-$characters = $character->getAll();
+$developer = new Developer();
+$developers = $developer->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +16,13 @@ $characters = $character->getAll();
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+
+    
         body {
             font-family: 'Press Start 2P', cursive;
+            background-image: url(assets/images/background.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .developer {
             text-align: center;
@@ -37,6 +42,11 @@ $characters = $character->getAll();
         .container{
             padding-top: 100px;
         }
+        .text{
+            background-color: white;
+            padding: 10px;
+            border-radius: 12px;
+        }
     </style>
 </head>
 <body>
@@ -49,19 +59,19 @@ $characters = $character->getAll();
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link mr-3" href="index.php">Home</a> <!-- Added mr-3 class for right margin -->
+                <a class="nav-link mr-3" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3" href="characters.php">Characters</a> <!-- Added mr-3 class for right margin -->
+                <a class="nav-link mr-3" href="characters.php">Characters</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3" href="settings.php">Setting</a> <!-- Added mr-3 class for right margin -->
+                <a class="nav-link mr-3" href="settings.php">Setting</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3" href="dialogs.php">Dialog</a> <!-- Added mr-3 class for right margin -->
+                <a class="nav-link mr-3" href="dialogs.php">Dialog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3" href="assets.php">Asset</a> <!-- Added mr-3 class for right margin -->
+                <a class="nav-link mr-3" href="assets.php">Asset</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="about.php">About</a>
@@ -74,21 +84,13 @@ $characters = $character->getAll();
 <div class="container mt-5">
     <h1 class="text-center">About the Developers</h1>
     <div class="row">
-        <div class="col-md-4 developer">
-            <img src="assets/images/background.gif" alt="Developer 1">
-            <h3>Juan Dela Cruz</h3>
-            <p>Lead Developer</p>
+        <?php foreach ($developers as $devs): ?>
+        <div class="col-md-4 col-sm-6 developer">
+            <img class="char-face" src="assets/images/<?php echo $devs['images']; ?>" alt="<?php echo $devs['name']; ?>">
+            <h3 class="text"><?php echo $devs['name']; ?></h3>
+            <p class="text"><?php echo $devs['status']; ?></p>
         </div>
-        <div class="col-md-4 developer">
-            <img src="assets/images/background.gif" alt="Developer 2">
-            <h3>Maria Clara</h3>
-            <p>Front-end Developer</p>
-        </div>
-        <div class="col-md-4 developer">
-            <img src="assets/images/background.gif" alt="Developer 3">
-            <h3>Jose Rizal</h3>
-            <p>Back-end Developer</p>
-        </div>
+        <?php endforeach; ?>
     </div>
 </div>
 
